@@ -1,0 +1,10 @@
+<h1>Your Basket</h1>
+<ul class="list-group">
+<li class="list-group-item" ng-repeat="c in cart">
+    <h4>{{c.name}} |                <span style="color:blue"> {{c.count}} </span>
+    | {{c.price*c.count | currency}}</h4>
+    <input class="btn btn-danger" type="button" ng-click="removeItemCart(c)" value="Remove" />
+</li>
+</ul>
+
+<td>Total: {{ getTotal() | currency }}</td>
